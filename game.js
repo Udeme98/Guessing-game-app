@@ -1,5 +1,5 @@
 //Defining the Secret Number
-const secNumber = Math.trunc(Math.random() * 20) + 1;
+let secNumber = Math.trunc(Math.random() * 20) + 1;
 //document.querySelector(".sNumber").textContent = secNumber;
 let score = 10;
 let highscore = 0;
@@ -57,6 +57,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
 document.querySelector(".again").addEventListener("click", function () {
   score = 10;
+  secNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".score").textContent = score;
   document.querySelector(".sNumber").textContent = "?";
   document.querySelector(".message").textContent = "Start guessing...";
